@@ -11,6 +11,15 @@ export function meta() {
   return { title: "New Remix App" };
 }
 
+export const action = async ({request}) => {
+	const form = await request.formData();
+	const imageId = form.get("imageId");
+
+	// return redirect(`https://picsum.photos/id/${imageId}/200/300`);
+	// return redirect(`picture/`);
+	return redirect(`picture/${imageId}`);
+}
+
 export default function App() {
   return (
     <html lang="en">
