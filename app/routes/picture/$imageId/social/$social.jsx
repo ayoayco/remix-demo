@@ -16,9 +16,7 @@ export const loader = ({params}) => {
 
 export default function () {
 	const loaderData = useLoaderData(); 
-	const imageId = loaderData.imageId;
-    const social = loaderData.social;
-	const title = loaderData.title;
+	const {imageId, social, title} = loaderData;
     const [width, height] = sizeMap[social];
 	const url = `https://picsum.photos/id/${imageId}/${width}/${height}`;
 

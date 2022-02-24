@@ -9,8 +9,7 @@ export const loader = ({params}) => {
 
 export default function ImageRoute () {
 	const loaderData = useLoaderData(); 
-	const imageId = loaderData.imageId;
-	const title = loaderData.title;
+	const { imageId, title } = loaderData;
 	const url = `https://picsum.photos/id/${imageId}/200/300`;
 
 	return (

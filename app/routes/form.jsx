@@ -17,7 +17,6 @@ export const action = async ({request}) => {
 
 export default function Form() {
 	const imageList = useLoaderData();
-	console.log(imageList);
 
 	const listItems = imageList.map(image => (
 			<li>
