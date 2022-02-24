@@ -8,22 +8,20 @@ const sizeMap = {
 
 export const loader = ({params}) => {
 	const {imageId, social} = params;
-	return {
-		imageId,
-        social,
-	};
+
+	return { imageId, social };
 }
 
 export default function () {
 	const loaderData = useLoaderData(); 
 	const {imageId, social} = loaderData;
-    const [width, height] = sizeMap[social];
+    const [width, height, socialName] = sizeMap[social];
 	const url = `https://picsum.photos/id/${imageId}/${width}/${height}`;
 
 	return (
 		<>
 			<a href="/form">Back</a>
-			<h1>Picture - {imageId} ({sizeMap[social][2]})</h1>
+			<h1>Picture - {imageId} ({socialName})</h1>
 			<img src={url} />
 		</>
 	)

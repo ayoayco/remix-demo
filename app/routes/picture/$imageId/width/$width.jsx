@@ -1,12 +1,9 @@
-import { useLoaderData, createCookieSessionStorage } from "remix";
+import { useLoaderData } from "remix";
 
 export const loader = ({params}) => {
 	const {imageId, width} = params;
 
-	return {
-		imageId,
-		width,
-	};
+	return { imageId, width };
 }
 
 export default function () {
