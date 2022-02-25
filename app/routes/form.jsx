@@ -12,7 +12,9 @@ export const action = async ({request}) => {
 	const width = form.get("width");
 	const social = form.get("social");
 
-	return width ? redirect(`picture/${imageId}/width/${width}`) : redirect(`picture/${imageId}/social/${social}`);
+	return width
+		? redirect(`picture/${imageId}/width/${width}`)
+		: redirect(`picture/${imageId}/social/${social}`);
 }
 
 export default function Form() {
